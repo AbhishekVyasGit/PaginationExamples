@@ -1,6 +1,6 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
-const uri = "mongodb+srv://abhishek2gaming:MongodbAbhi@cluster0.smrmunl.mongodb.net/pagination?retryWrites=true&w=majority"
-
+const uri = process.env.URI_MONGODB
 module.exports = mongoose.connect(uri).then(() => {
     console.log("connection successful");
 }).catch((err) => {
